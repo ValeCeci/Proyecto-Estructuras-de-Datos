@@ -18,14 +18,13 @@ public class PilaCastigo {
         top = -1; //le pongo -1 porque la pila está vacía
     }
     
-    public void pushPremio(Castigo castigo){
+    public void push(Castigo castigo){
         if (top == (maxSize -1)){
             System.out.println("Error de desbordamiento. Pila llena");
         } else {
             //si la pila tiene campo entonces inserte ese elemento
             top =top + 1;
             pilaCastigo[top] = castigo; //insertar en el top de la pila
-            //pila[++top] = elemento
         }
     }
     
@@ -40,9 +39,16 @@ public class PilaCastigo {
             Castigo temp = pilaCastigo[top]; //guardo en una variable temporal lo que está en la cima 
             top = top -1; //muevo la cima una posicion antes
             return temp; //retorno el elemento que saqué de la pila
-            
-            //MANERA 2
-            // return pila[top--];
+        }
+    }
+    
+    public void imprimirPila() {
+        if (top == -1) {
+            System.out.println("La pila está vacía");
+        } else {
+            for (int i = top; i >= 0; i--){
+                System.out.println(pilaCastigo[i].getDescripcion());
+            }
         }
     }
 }
