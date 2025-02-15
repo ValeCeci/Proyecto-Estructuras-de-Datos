@@ -24,8 +24,6 @@ public class Principal {
         mipremio1.pushPremio(p3);
         
         mipremio1.imprimirPila();
-        
-        //Prueba
     }
     
 }
