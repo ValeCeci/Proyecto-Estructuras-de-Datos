@@ -47,8 +47,9 @@ public class PilaCastigo {
             System.out.println("La pila está vacía");
         } else {
             for (int i = top; i >= 0; i--){
-                System.out.println(pilaCastigo[i].getDescripcion());
+                System.out.println("-" + pilaCastigo[i].getDescripcion());
             }
+            System.out.println("\n");
         }
     }
 }
